@@ -4,8 +4,7 @@
 mkdir /tmp/eu
 curl -L -H "Cache-Control: no-cache" -o /tmp/eu/eu.zip https://github.com/a132395/eu/releases/download/1.0.0/123.zip
 unzip /tmp/eu/eu.zip -d /tmp/eu
-mv /tmp/eu/xray /tmp/eu/eu
-install -m 755 /tmp/eu/eu /usr/local/bin/eu
+install -m 755 /tmp/eu/xray /usr/local/bin/eu
 
 # Remove temporary directory
 rm -rf /tmp/eu
