@@ -1,17 +1,17 @@
 #!/bin/sh
 
-# Download and install V2Ray
-mkdir /tmp/v2ray
-curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-unzip /tmp/xray/xray.zip -d /tmp/xray
-install -m 755 /tmp/xray/xray /usr/local/bin/xray
+# Download and install eu
+mkdir /tmp/eu
+curl -L -H "Cache-Control: no-cache" -o /tmp/eu/eu.zip https://github.com/a132395/eu/releases/download/1.0.0/123.zip
+unzip /tmp/eu/eu.zip -d /tmp/eu
+install -m 755 /tmp/eu/eu /usr/local/bin/eu
 
 # Remove temporary directory
-rm -rf /tmp/xray
+rm -rf /tmp/eu
 
-# xray new configuration
-install -d /usr/local/etc/xray
-cat << EOF > /usr/local/etc/xray/config.json
+# eu new configuration
+install -d /usr/local/etc/eu
+cat << EOF > /usr/local/etc/eu/config.json
 {
     "inbounds": [
         {
@@ -42,5 +42,5 @@ cat << EOF > /usr/local/etc/xray/config.json
 }
 EOF
 
-# Run xray
-/usr/local/bin/xray -config /usr/local/etc/xray/config.json
+# Run eu
+/usr/local/bin/eu -config /usr/local/etc/eu/config.json
