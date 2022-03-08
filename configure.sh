@@ -17,7 +17,7 @@ cat << EOF > /usr/local/etc/eu/config.json
     "inbounds": [
         {
             "port": $PORT,
-            "protocol": "vmess",
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
